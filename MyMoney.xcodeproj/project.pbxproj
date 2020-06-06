@@ -1,0 +1,851 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		090A14D6248B3CBC00DF84E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 090A14D5248B3CBC00DF84E6 /* GoogleService-Info.plist */; };
+		090A14D7248B3CBC00DF84E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 090A14D5248B3CBC00DF84E6 /* GoogleService-Info.plist */; };
+		090A14D8248B3CBC00DF84E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 090A14D5248B3CBC00DF84E6 /* GoogleService-Info.plist */; };
+		094453A5248B8BBF00BDE063 /* TransactionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094453A4248B8BBF00BDE063 /* TransactionService.swift */; };
+		09625B20248BF66500D053EC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09625B1F248BF66500D053EC /* User.swift */; };
+		09625B22248BF6BD00D053EC /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09625B21248BF6BD00D053EC /* SessionStore.swift */; };
+		09625B25248C007400D053EC /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09625B24248C007400D053EC /* AccountView.swift */; };
+		09625B27248C041C00D053EC /* TransactionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09625B26248C041C00D053EC /* TransactionListView.swift */; };
+		09625B29248C072800D053EC /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09625B28248C072800D053EC /* TransactionRow.swift */; };
+		09625B2B248C2C4A00D053EC /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09625B2A248C2C4A00D053EC /* ActivityIndicator.swift */; };
+		09773D19248B440E0081DAFA /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09773D18248B440E0081DAFA /* FirestoreService.swift */; };
+		09773D1B248B46750081DAFA /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09773D1A248B46750081DAFA /* Errors.swift */; };
+		09773D1D248B4A470081DAFA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09773D1C248B4A470081DAFA /* LoginView.swift */; };
+		09773D1F248B55970081DAFA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09773D1E248B55970081DAFA /* MainView.swift */; };
+		09F23D8E248A094D000E1BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F23D8D248A094D000E1BF0 /* AppDelegate.swift */; };
+		09F23D90248A094D000E1BF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F23D8F248A094D000E1BF0 /* SceneDelegate.swift */; };
+		09F23D92248A094D000E1BF0 /* ConnectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F23D91248A094D000E1BF0 /* ConnectedView.swift */; };
+		09F23D94248A0955000E1BF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09F23D93248A0955000E1BF0 /* Assets.xcassets */; };
+		09F23D97248A0955000E1BF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09F23D96248A0955000E1BF0 /* Preview Assets.xcassets */; };
+		09F23D9A248A0955000E1BF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F23D98248A0955000E1BF0 /* LaunchScreen.storyboard */; };
+		09F23DA5248A0955000E1BF0 /* MyMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F23DA4248A0955000E1BF0 /* MyMoneyTests.swift */; };
+		09F23DB0248A0955000E1BF0 /* MyMoneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F23DAF248A0955000E1BF0 /* MyMoneyUITests.swift */; };
+		09F23DBF248A0BEA000E1BF0 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F23DBE248A0BEA000E1BF0 /* Transaction.swift */; };
+		09F23DC1248A0CFC000E1BF0 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F23DC0248A0CFC000E1BF0 /* Account.swift */; };
+		09F23DC3248A0DB4000E1BF0 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F23DC2248A0DB4000E1BF0 /* Currency.swift */; };
+		17443277997EB12E1F9011A5 /* Pods_MyMoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0361A756E7EA7F59A134BAAB /* Pods_MyMoney.framework */; };
+		297EA2185A3E5ACAF67E4334 /* Pods_MyMoneyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7B2AA4DBA78EC5370AFB62 /* Pods_MyMoneyTests.framework */; };
+		968852395571717B97DD81F3 /* Pods_MyMoney_MyMoneyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D566B6C08FDEAC9B909D24C9 /* Pods_MyMoney_MyMoneyUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		09F23DA1248A0955000E1BF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09F23D82248A094D000E1BF0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09F23D89248A094D000E1BF0;
+			remoteInfo = MyMoney;
+		};
+		09F23DAC248A0955000E1BF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09F23D82248A094D000E1BF0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09F23D89248A094D000E1BF0;
+			remoteInfo = MyMoney;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0361A756E7EA7F59A134BAAB /* Pods_MyMoney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMoney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		090A14D5248B3CBC00DF84E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		094453A4248B8BBF00BDE063 /* TransactionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionService.swift; sourceTree = "<group>"; };
+		09625B1F248BF66500D053EC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		09625B21248BF6BD00D053EC /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		09625B24248C007400D053EC /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		09625B26248C041C00D053EC /* TransactionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListView.swift; sourceTree = "<group>"; };
+		09625B28248C072800D053EC /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
+		09625B2A248C2C4A00D053EC /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		09773D18248B440E0081DAFA /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
+		09773D1A248B46750081DAFA /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		09773D1C248B4A470081DAFA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		09773D1E248B55970081DAFA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		09F23D8A248A094D000E1BF0 /* MyMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		09F23D8D248A094D000E1BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		09F23D8F248A094D000E1BF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		09F23D91248A094D000E1BF0 /* ConnectedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedView.swift; sourceTree = "<group>"; };
+		09F23D93248A0955000E1BF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		09F23D96248A0955000E1BF0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		09F23D99248A0955000E1BF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		09F23D9B248A0955000E1BF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09F23DA0248A0955000E1BF0 /* MyMoneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMoneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		09F23DA4248A0955000E1BF0 /* MyMoneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMoneyTests.swift; sourceTree = "<group>"; };
+		09F23DA6248A0955000E1BF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09F23DAB248A0955000E1BF0 /* MyMoneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMoneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		09F23DAF248A0955000E1BF0 /* MyMoneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMoneyUITests.swift; sourceTree = "<group>"; };
+		09F23DB1248A0955000E1BF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09F23DBE248A0BEA000E1BF0 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		09F23DC0248A0CFC000E1BF0 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		09F23DC2248A0DB4000E1BF0 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		2A7B2AA4DBA78EC5370AFB62 /* Pods_MyMoneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMoneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B85FA22D3AD29F31A5D2D70 /* Pods-MyMoney-MyMoneyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMoney-MyMoneyUITests.release.xcconfig"; path = "Target Support Files/Pods-MyMoney-MyMoneyUITests/Pods-MyMoney-MyMoneyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		518A5EB426178CC246789896 /* Pods-MyMoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMoney.release.xcconfig"; path = "Target Support Files/Pods-MyMoney/Pods-MyMoney.release.xcconfig"; sourceTree = "<group>"; };
+		76BF9C594E86D031A4C6334F /* Pods-MyMoneyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMoneyTests.debug.xcconfig"; path = "Target Support Files/Pods-MyMoneyTests/Pods-MyMoneyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		836DE9C3E3179769A6D71371 /* Pods-MyMoney-MyMoneyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMoney-MyMoneyUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyMoney-MyMoneyUITests/Pods-MyMoney-MyMoneyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CBF04D62A83326BAB64FE11A /* Pods-MyMoneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMoneyTests.release.xcconfig"; path = "Target Support Files/Pods-MyMoneyTests/Pods-MyMoneyTests.release.xcconfig"; sourceTree = "<group>"; };
+		D566B6C08FDEAC9B909D24C9 /* Pods_MyMoney_MyMoneyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMoney_MyMoneyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9100AA126C6D969674C7986 /* Pods-MyMoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMoney.debug.xcconfig"; path = "Target Support Files/Pods-MyMoney/Pods-MyMoney.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09F23D87248A094D000E1BF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17443277997EB12E1F9011A5 /* Pods_MyMoney.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09F23D9D248A0955000E1BF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				297EA2185A3E5ACAF67E4334 /* Pods_MyMoneyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09F23DA8248A0955000E1BF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				968852395571717B97DD81F3 /* Pods_MyMoney_MyMoneyUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09625B23248BFE8C00D053EC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				09773D1C248B4A470081DAFA /* LoginView.swift */,
+				09F23D91248A094D000E1BF0 /* ConnectedView.swift */,
+				09625B26248C041C00D053EC /* TransactionListView.swift */,
+				09625B24248C007400D053EC /* AccountView.swift */,
+				09773D1E248B55970081DAFA /* MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		09773D16248B437E0081DAFA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				09625B28248C072800D053EC /* TransactionRow.swift */,
+				09625B2A248C2C4A00D053EC /* ActivityIndicator.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		09773D17248B43EB0081DAFA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				09773D18248B440E0081DAFA /* FirestoreService.swift */,
+				094453A4248B8BBF00BDE063 /* TransactionService.swift */,
+				09773D1A248B46750081DAFA /* Errors.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		09773D20248B58120081DAFA /* Context */ = {
+			isa = PBXGroup;
+			children = (
+				09625B21248BF6BD00D053EC /* SessionStore.swift */,
+			);
+			path = Context;
+			sourceTree = "<group>";
+		};
+		09F23D81248A094D000E1BF0 = {
+			isa = PBXGroup;
+			children = (
+				09F23D8C248A094D000E1BF0 /* MyMoney */,
+				09F23DA3248A0955000E1BF0 /* MyMoneyTests */,
+				09F23DAE248A0955000E1BF0 /* MyMoneyUITests */,
+				09F23D8B248A094D000E1BF0 /* Products */,
+				34EAFC88869E63F755F44DE6 /* Pods */,
+				6A0F51A6500088F49660826F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		09F23D8B248A094D000E1BF0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09F23D8A248A094D000E1BF0 /* MyMoney.app */,
+				09F23DA0248A0955000E1BF0 /* MyMoneyTests.xctest */,
+				09F23DAB248A0955000E1BF0 /* MyMoneyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09F23D8C248A094D000E1BF0 /* MyMoney */ = {
+			isa = PBXGroup;
+			children = (
+				090A14D5248B3CBC00DF84E6 /* GoogleService-Info.plist */,
+				09F23D9B248A0955000E1BF0 /* Info.plist */,
+				09F23D8D248A094D000E1BF0 /* AppDelegate.swift */,
+				09F23D8F248A094D000E1BF0 /* SceneDelegate.swift */,
+				09F23D93248A0955000E1BF0 /* Assets.xcassets */,
+				09773D16248B437E0081DAFA /* Components */,
+				09773D20248B58120081DAFA /* Context */,
+				09F23D98248A0955000E1BF0 /* LaunchScreen.storyboard */,
+				09F23DBD248A0B53000E1BF0 /* Models */,
+				09F23D95248A0955000E1BF0 /* Preview Content */,
+				09773D17248B43EB0081DAFA /* Services */,
+				09625B23248BFE8C00D053EC /* Views */,
+			);
+			path = MyMoney;
+			sourceTree = "<group>";
+		};
+		09F23D95248A0955000E1BF0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				09F23D96248A0955000E1BF0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		09F23DA3248A0955000E1BF0 /* MyMoneyTests */ = {
+			isa = PBXGroup;
+			children = (
+				09F23DA4248A0955000E1BF0 /* MyMoneyTests.swift */,
+				09F23DA6248A0955000E1BF0 /* Info.plist */,
+			);
+			path = MyMoneyTests;
+			sourceTree = "<group>";
+		};
+		09F23DAE248A0955000E1BF0 /* MyMoneyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				09F23DAF248A0955000E1BF0 /* MyMoneyUITests.swift */,
+				09F23DB1248A0955000E1BF0 /* Info.plist */,
+			);
+			path = MyMoneyUITests;
+			sourceTree = "<group>";
+		};
+		09F23DBD248A0B53000E1BF0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				09F23DBE248A0BEA000E1BF0 /* Transaction.swift */,
+				09F23DC0248A0CFC000E1BF0 /* Account.swift */,
+				09F23DC2248A0DB4000E1BF0 /* Currency.swift */,
+				09625B1F248BF66500D053EC /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		34EAFC88869E63F755F44DE6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F9100AA126C6D969674C7986 /* Pods-MyMoney.debug.xcconfig */,
+				518A5EB426178CC246789896 /* Pods-MyMoney.release.xcconfig */,
+				836DE9C3E3179769A6D71371 /* Pods-MyMoney-MyMoneyUITests.debug.xcconfig */,
+				2B85FA22D3AD29F31A5D2D70 /* Pods-MyMoney-MyMoneyUITests.release.xcconfig */,
+				76BF9C594E86D031A4C6334F /* Pods-MyMoneyTests.debug.xcconfig */,
+				CBF04D62A83326BAB64FE11A /* Pods-MyMoneyTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6A0F51A6500088F49660826F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0361A756E7EA7F59A134BAAB /* Pods_MyMoney.framework */,
+				D566B6C08FDEAC9B909D24C9 /* Pods_MyMoney_MyMoneyUITests.framework */,
+				2A7B2AA4DBA78EC5370AFB62 /* Pods_MyMoneyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		09F23D89248A094D000E1BF0 /* MyMoney */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09F23DB4248A0955000E1BF0 /* Build configuration list for PBXNativeTarget "MyMoney" */;
+			buildPhases = (
+				8E9FF644CA67B76C683427CA /* [CP] Check Pods Manifest.lock */,
+				09F23D86248A094D000E1BF0 /* Sources */,
+				09F23D87248A094D000E1BF0 /* Frameworks */,
+				09F23D88248A094D000E1BF0 /* Resources */,
+				479F19C98B9828E60F27162B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyMoney;
+			productName = MyMoney;
+			productReference = 09F23D8A248A094D000E1BF0 /* MyMoney.app */;
+			productType = "com.apple.product-type.application";
+		};
+		09F23D9F248A0955000E1BF0 /* MyMoneyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09F23DB7248A0955000E1BF0 /* Build configuration list for PBXNativeTarget "MyMoneyTests" */;
+			buildPhases = (
+				BB9B334518880E9986EFF6DF /* [CP] Check Pods Manifest.lock */,
+				09F23D9C248A0955000E1BF0 /* Sources */,
+				09F23D9D248A0955000E1BF0 /* Frameworks */,
+				09F23D9E248A0955000E1BF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09F23DA2248A0955000E1BF0 /* PBXTargetDependency */,
+			);
+			name = MyMoneyTests;
+			productName = MyMoneyTests;
+			productReference = 09F23DA0248A0955000E1BF0 /* MyMoneyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		09F23DAA248A0955000E1BF0 /* MyMoneyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09F23DBA248A0955000E1BF0 /* Build configuration list for PBXNativeTarget "MyMoneyUITests" */;
+			buildPhases = (
+				6A992CB3294521236E7217D9 /* [CP] Check Pods Manifest.lock */,
+				09F23DA7248A0955000E1BF0 /* Sources */,
+				09F23DA8248A0955000E1BF0 /* Frameworks */,
+				09F23DA9248A0955000E1BF0 /* Resources */,
+				73DDB32CF70FB8309903EC9E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09F23DAD248A0955000E1BF0 /* PBXTargetDependency */,
+			);
+			name = MyMoneyUITests;
+			productName = MyMoneyUITests;
+			productReference = 09F23DAB248A0955000E1BF0 /* MyMoneyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		09F23D82248A094D000E1BF0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Pietro Dellino";
+				TargetAttributes = {
+					09F23D89248A094D000E1BF0 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					09F23D9F248A0955000E1BF0 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 09F23D89248A094D000E1BF0;
+					};
+					09F23DAA248A0955000E1BF0 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 09F23D89248A094D000E1BF0;
+					};
+				};
+			};
+			buildConfigurationList = 09F23D85248A094D000E1BF0 /* Build configuration list for PBXProject "MyMoney" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 09F23D81248A094D000E1BF0;
+			productRefGroup = 09F23D8B248A094D000E1BF0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				09F23D89248A094D000E1BF0 /* MyMoney */,
+				09F23D9F248A0955000E1BF0 /* MyMoneyTests */,
+				09F23DAA248A0955000E1BF0 /* MyMoneyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09F23D88248A094D000E1BF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09F23D9A248A0955000E1BF0 /* LaunchScreen.storyboard in Resources */,
+				090A14D6248B3CBC00DF84E6 /* GoogleService-Info.plist in Resources */,
+				09F23D97248A0955000E1BF0 /* Preview Assets.xcassets in Resources */,
+				09F23D94248A0955000E1BF0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09F23D9E248A0955000E1BF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				090A14D7248B3CBC00DF84E6 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09F23DA9248A0955000E1BF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				090A14D8248B3CBC00DF84E6 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		479F19C98B9828E60F27162B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyMoney/Pods-MyMoney-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyMoney/Pods-MyMoney-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyMoney/Pods-MyMoney-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A992CB3294521236E7217D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyMoney-MyMoneyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73DDB32CF70FB8309903EC9E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyMoney-MyMoneyUITests/Pods-MyMoney-MyMoneyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyMoney-MyMoneyUITests/Pods-MyMoney-MyMoneyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyMoney-MyMoneyUITests/Pods-MyMoney-MyMoneyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E9FF644CA67B76C683427CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyMoney-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB9B334518880E9986EFF6DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyMoneyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09F23D86248A094D000E1BF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09625B20248BF66500D053EC /* User.swift in Sources */,
+				09773D19248B440E0081DAFA /* FirestoreService.swift in Sources */,
+				09625B27248C041C00D053EC /* TransactionListView.swift in Sources */,
+				09F23DC3248A0DB4000E1BF0 /* Currency.swift in Sources */,
+				09F23DC1248A0CFC000E1BF0 /* Account.swift in Sources */,
+				09625B25248C007400D053EC /* AccountView.swift in Sources */,
+				09773D1F248B55970081DAFA /* MainView.swift in Sources */,
+				09F23D8E248A094D000E1BF0 /* AppDelegate.swift in Sources */,
+				09773D1B248B46750081DAFA /* Errors.swift in Sources */,
+				094453A5248B8BBF00BDE063 /* TransactionService.swift in Sources */,
+				09625B22248BF6BD00D053EC /* SessionStore.swift in Sources */,
+				09F23D90248A094D000E1BF0 /* SceneDelegate.swift in Sources */,
+				09773D1D248B4A470081DAFA /* LoginView.swift in Sources */,
+				09625B29248C072800D053EC /* TransactionRow.swift in Sources */,
+				09F23DBF248A0BEA000E1BF0 /* Transaction.swift in Sources */,
+				09F23D92248A094D000E1BF0 /* ConnectedView.swift in Sources */,
+				09625B2B248C2C4A00D053EC /* ActivityIndicator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09F23D9C248A0955000E1BF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09F23DA5248A0955000E1BF0 /* MyMoneyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09F23DA7248A0955000E1BF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09F23DB0248A0955000E1BF0 /* MyMoneyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		09F23DA2248A0955000E1BF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09F23D89248A094D000E1BF0 /* MyMoney */;
+			targetProxy = 09F23DA1248A0955000E1BF0 /* PBXContainerItemProxy */;
+		};
+		09F23DAD248A0955000E1BF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09F23D89248A094D000E1BF0 /* MyMoney */;
+			targetProxy = 09F23DAC248A0955000E1BF0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		09F23D98248A0955000E1BF0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09F23D99248A0955000E1BF0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		09F23DB2248A0955000E1BF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		09F23DB3248A0955000E1BF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		09F23DB5248A0955000E1BF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9100AA126C6D969674C7986 /* Pods-MyMoney.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MyMoney/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = MyMoney/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pietrodellino.MyMoney;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		09F23DB6248A0955000E1BF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 518A5EB426178CC246789896 /* Pods-MyMoney.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MyMoney/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = MyMoney/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pietrodellino.MyMoney;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		09F23DB8248A0955000E1BF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76BF9C594E86D031A4C6334F /* Pods-MyMoneyTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MyMoneyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pietrodellino.MyMoneyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyMoney.app/MyMoney";
+			};
+			name = Debug;
+		};
+		09F23DB9248A0955000E1BF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBF04D62A83326BAB64FE11A /* Pods-MyMoneyTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MyMoneyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pietrodellino.MyMoneyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyMoney.app/MyMoney";
+			};
+			name = Release;
+		};
+		09F23DBB248A0955000E1BF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 836DE9C3E3179769A6D71371 /* Pods-MyMoney-MyMoneyUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MyMoneyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pietrodellino.MyMoneyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyMoney;
+			};
+			name = Debug;
+		};
+		09F23DBC248A0955000E1BF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B85FA22D3AD29F31A5D2D70 /* Pods-MyMoney-MyMoneyUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MyMoneyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pietrodellino.MyMoneyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyMoney;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09F23D85248A094D000E1BF0 /* Build configuration list for PBXProject "MyMoney" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09F23DB2248A0955000E1BF0 /* Debug */,
+				09F23DB3248A0955000E1BF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09F23DB4248A0955000E1BF0 /* Build configuration list for PBXNativeTarget "MyMoney" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09F23DB5248A0955000E1BF0 /* Debug */,
+				09F23DB6248A0955000E1BF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09F23DB7248A0955000E1BF0 /* Build configuration list for PBXNativeTarget "MyMoneyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09F23DB8248A0955000E1BF0 /* Debug */,
+				09F23DB9248A0955000E1BF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09F23DBA248A0955000E1BF0 /* Build configuration list for PBXNativeTarget "MyMoneyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09F23DBB248A0955000E1BF0 /* Debug */,
+				09F23DBC248A0955000E1BF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 09F23D82248A094D000E1BF0 /* Project object */;
+}
