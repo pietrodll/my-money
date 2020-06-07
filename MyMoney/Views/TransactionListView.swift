@@ -12,7 +12,7 @@ struct TransactionListView: View {
     var service = TransactionService.getInstance()
 
     @State private var transactions: [Transaction] = []
-    @State private var error: String? = nil
+    @State private var error: String?
     @State private var loading = false
 
     func fetchTransactions() {
@@ -33,14 +33,16 @@ struct TransactionListView: View {
         NavigationView {
             Group {
                 if loading {
-                    ActivityIndicator(isAnimating: $loading, style: .large)
+                    ActivityIndicator(style: .large)
                 } else {
                     if error != nil {
                         Text("Error: \(error ?? "")")
                     } else {
                         List {
                             ForEach(transactions) { transaction in
-                                TransactionRow(transaction: transaction)
+                                NavigationLink(destination: TransactionDetailsView(transaction: transaction)) {
+                                    TransactionRow(transaction: transaction)
+                                }
                             }
                         }
                     }

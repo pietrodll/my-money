@@ -19,7 +19,28 @@ struct Transaction: Hashable, Identifiable {
     var createdAt: Date
 }
 
-extension Transaction {
+enum TransactionType {
+    case expense
+    case benefit
+}
+
+protocol DisplayableTransaction {
+    var formattedDate: String { get }
+    var formattedAmount: String { get }
+    var type: TransactionType { get }
+}
+
+extension Transaction: DisplayableTransaction {
+    var formattedDate: String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        return formatter.string(from: self.createdAt)
+    }
+
+    var formattedAmount: String {
+        String(amount) + " " + currency.rawValue
+    }
+
     var type: TransactionType {
         amount > 0 ? .benefit : .expense
     }
@@ -34,7 +55,7 @@ extension Transaction: FirestoreEntity {
             let createdAt = data["createdAt"] as? Timestamp,
             let account = data["account"] as? String
         else {
-            throw InstanciationError(collection: "transaction", className: "Transaction", causedBy: data)
+            throw InstanciationError(collection: "transactions", className: "Transaction", causedBy: data)
         }
         self.id = id
         self.currency = currency
@@ -53,14 +74,4 @@ extension Transaction: FirestoreEntity {
             "currency": currency
         ]
     }
-}
-
-struct TransactionCategory: Hashable, Codable, Identifiable {
-    let id: String
-    let name: String
-}
-
-enum TransactionType {
-    case expense
-    case benefit
 }

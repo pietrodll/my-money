@@ -21,6 +21,16 @@ struct ActivityIndicator: UIViewRepresentable {
     }
 }
 
+extension ActivityIndicator {
+    init(style: UIActivityIndicatorView.Style) {
+        self.init(isAnimating: Binding.constant(true), style: style)
+    }
+
+    init() {
+        self.init(style: .medium)
+    }
+}
+
 struct ActivityIndicator_Previews: PreviewProvider {
     @State static var loading = true
 
