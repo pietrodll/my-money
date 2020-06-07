@@ -9,7 +9,7 @@
 import Foundation
 
 enum Currency: String, Codable, Hashable {
-    case USD = "USD"
-    case EUR = "EUR"
-    case SGD = "SGD"
+    case USD
+    case EUR
+    case SGD
 }

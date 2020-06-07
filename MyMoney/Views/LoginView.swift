@@ -15,11 +15,11 @@ struct LoginView: View {
     @State private var password = ""
     @State private var loading = false
     @State private var error = false
-    
+
     func handleSignin() {
         loading = true
         error = false
-        session.signIn(email: email, password: password) { result, error in
+        session.signIn(email: email, password: password) { _, error in
             self.loading = false
             if error != nil {
                 self.error = true
@@ -49,7 +49,7 @@ struct LoginView: View {
                     Text("Sign in")
                 }
             }
-            
+
             if error {
                 Text("An error occurred!")
             }

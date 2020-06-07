@@ -10,7 +10,7 @@ import SwiftUI
 
 struct MainView: View {
     @EnvironmentObject var session: SessionStore
-    
+
     func initAuth() {
         session.listen()
     }

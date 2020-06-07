@@ -12,7 +12,7 @@ struct AccountView: View {
     @State private var error: String?
 
     @EnvironmentObject private var session: SessionStore
-    
+
     func handleSignOut() {
         let success = session.signOut()
         if success {

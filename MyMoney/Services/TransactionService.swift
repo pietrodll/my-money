@@ -13,8 +13,8 @@ final class TransactionService: FirestoreService {
     typealias Item = Transaction
 
     static var collectionName = "transactions"
-    static var db: Firestore? = nil
-    private static var instance: TransactionService? = nil
+    static var db: Firestore?
+    private static var instance: TransactionService?
 
     static func getInstance() -> TransactionService {
         if Self.instance == nil {
@@ -24,12 +24,12 @@ final class TransactionService: FirestoreService {
         return Self.instance!
     }
 
-    static func toModel(data: [String : Any], id: String) -> Transaction? {
+    static func toModel(data: [String: Any], id: String) -> Transaction? {
         let transaction = try? Transaction(fromFirestore: data, id: id)
         return transaction
     }
 
-    static func toDict(model: Transaction) -> [String : Any] {
+    static func toDict(model: Transaction) -> [String: Any] {
         return model.toFirestore()
     }
 

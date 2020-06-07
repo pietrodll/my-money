@@ -11,6 +11,10 @@ target 'MyMoney' do
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
 
+  # Linter
+
+  pod 'SwiftLint'
+
   target 'MyMoneyTests' do
     inherit! :search_paths
     # Pods for testing

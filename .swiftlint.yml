@@ -1,0 +1,9 @@
+excluded:
+    - Pods
+
+identifier_name:
+    min_length: 2
+
+switch_case_alignment:
+    indented_cases: true
+

@@ -12,7 +12,7 @@ class FirestoreError: Error {
     let collection: String
     let message: String
     let error: Error?
-    
+
     init(collection: String, message: String, error: Error) {
         self.collection = collection
         self.message = message
@@ -26,10 +26,9 @@ class FirestoreError: Error {
     }
 }
 
-
 class NotFoundError: FirestoreError {
     let id: String
-    
+
     init(collection: String, id: String) {
         let message = "Document not found: \(id)"
         self.id = id

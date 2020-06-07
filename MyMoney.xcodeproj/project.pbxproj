@@ -17,10 +17,12 @@
 		09625B27248C041C00D053EC /* TransactionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09625B26248C041C00D053EC /* TransactionListView.swift */; };
 		09625B29248C072800D053EC /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09625B28248C072800D053EC /* TransactionRow.swift */; };
 		09625B2B248C2C4A00D053EC /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09625B2A248C2C4A00D053EC /* ActivityIndicator.swift */; };
+		0963381E248C45EC00CAEAB6 /* TransactionDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0963381D248C45EB00CAEAB6 /* TransactionDetailsView.swift */; };
 		09773D19248B440E0081DAFA /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09773D18248B440E0081DAFA /* FirestoreService.swift */; };
 		09773D1B248B46750081DAFA /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09773D1A248B46750081DAFA /* Errors.swift */; };
 		09773D1D248B4A470081DAFA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09773D1C248B4A470081DAFA /* LoginView.swift */; };
 		09773D1F248B55970081DAFA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09773D1E248B55970081DAFA /* MainView.swift */; };
+		09E2A868248D7F1000C9F50C /* TransactionCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E2A867248D7F1000C9F50C /* TransactionCategory.swift */; };
 		09F23D8E248A094D000E1BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F23D8D248A094D000E1BF0 /* AppDelegate.swift */; };
 		09F23D90248A094D000E1BF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F23D8F248A094D000E1BF0 /* SceneDelegate.swift */; };
 		09F23D92248A094D000E1BF0 /* ConnectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F23D91248A094D000E1BF0 /* ConnectedView.swift */; };
@@ -64,10 +66,12 @@
 		09625B26248C041C00D053EC /* TransactionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListView.swift; sourceTree = "<group>"; };
 		09625B28248C072800D053EC /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
 		09625B2A248C2C4A00D053EC /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		0963381D248C45EB00CAEAB6 /* TransactionDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsView.swift; sourceTree = "<group>"; };
 		09773D18248B440E0081DAFA /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		09773D1A248B46750081DAFA /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		09773D1C248B4A470081DAFA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		09773D1E248B55970081DAFA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		09E2A867248D7F1000C9F50C /* TransactionCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCategory.swift; sourceTree = "<group>"; };
 		09F23D8A248A094D000E1BF0 /* MyMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F23D8D248A094D000E1BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09F23D8F248A094D000E1BF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 				09773D1C248B4A470081DAFA /* LoginView.swift */,
 				09F23D91248A094D000E1BF0 /* ConnectedView.swift */,
 				09625B26248C041C00D053EC /* TransactionListView.swift */,
+				0963381D248C45EB00CAEAB6 /* TransactionDetailsView.swift */,
 				09625B24248C007400D053EC /* AccountView.swift */,
 				09773D1E248B55970081DAFA /* MainView.swift */,
 			);
@@ -233,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				09F23DBE248A0BEA000E1BF0 /* Transaction.swift */,
+				09E2A867248D7F1000C9F50C /* TransactionCategory.swift */,
 				09F23DC0248A0CFC000E1BF0 /* Account.swift */,
 				09F23DC2248A0DB4000E1BF0 /* Currency.swift */,
 				09625B1F248BF66500D053EC /* User.swift */,
@@ -275,6 +281,7 @@
 				09F23D87248A094D000E1BF0 /* Frameworks */,
 				09F23D88248A094D000E1BF0 /* Resources */,
 				479F19C98B9828E60F27162B /* [CP] Embed Pods Frameworks */,
+				09575916248D9E7D00BE51CB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -398,6 +405,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		09575916248D9E7D00BE51CB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		479F19C98B9828E60F27162B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -517,8 +541,10 @@
 				094453A5248B8BBF00BDE063 /* TransactionService.swift in Sources */,
 				09625B22248BF6BD00D053EC /* SessionStore.swift in Sources */,
 				09F23D90248A094D000E1BF0 /* SceneDelegate.swift in Sources */,
+				0963381E248C45EC00CAEAB6 /* TransactionDetailsView.swift in Sources */,
 				09773D1D248B4A470081DAFA /* LoginView.swift in Sources */,
 				09625B29248C072800D053EC /* TransactionRow.swift in Sources */,
+				09E2A868248D7F1000C9F50C /* TransactionCategory.swift in Sources */,
 				09F23DBF248A0BEA000E1BF0 /* Transaction.swift in Sources */,
 				09F23D92248A094D000E1BF0 /* ConnectedView.swift in Sources */,
 				09625B2B248C2C4A00D053EC /* ActivityIndicator.swift in Sources */,

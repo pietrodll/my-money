@@ -21,14 +21,17 @@ protocol FirestoreService {
     static var db: Firestore? { get }
 
     static func getInstance() -> Self
-    
+
     static func toModel(data: [String: Any], id: String) -> Item?
     static func toDict(model: Item) -> [String: Any]
 }
 
 extension FirestoreService {
-    private static func createFirestoreError(_ message: String, _ error: Error) -> FirestoreError {
-        return FirestoreError(collection: Self.collectionName, message: message, error: error)
+    private static func createFirestoreError(_ message: String, _ error: Error?) -> FirestoreError {
+        if let error = error {
+            return FirestoreError(collection: Self.collectionName, message: message, error: error)
+        }
+        return FirestoreError(collection: Self.collectionName, message: message)
     }
 
     public func get(collection: String, id: String, completion: @escaping (Result<Item, FirestoreError>) -> Void) {
@@ -61,7 +64,7 @@ extension FirestoreService {
     }
 
     public func list(collection: String, completion: @escaping (Result<[Item], FirestoreError>) -> Void) {
-        Self.db?.collection(collection).getDocuments() { snapshot, err in
+        Self.db?.collection(collection).getDocuments { snapshot, err in
             if let err = err {
                 completion(.failure(Self.createFirestoreError("Error while getting documents", err)))
                 return
@@ -91,8 +94,15 @@ extension FirestoreService {
         self.list(collection: Self.collectionName, completion: completion)
     }
 
-    public func update(collection: String, updated: Item, completion: @escaping (Result<Void, FirestoreError>) -> Void) {
-        Self.db?.collection(collection).document(updated.id as! String).setData(updated.toFirestore()) { err in
+    public func update(collection: String,
+                       updated: Item,
+                       completion: @escaping (Result<Void, FirestoreError>) -> Void) {
+        guard let itemId = updated.id as? String else {
+            completion(.failure(Self.createFirestoreError("Invalid item to update", nil)))
+            return
+        }
+
+        Self.db?.collection(collection).document(itemId).setData(updated.toFirestore()) { err in
             if let err = err {
                 completion(.failure(Self.createFirestoreError("Error while updating document", err)))
             } else {
@@ -105,8 +115,10 @@ extension FirestoreService {
         self.update(collection: Self.collectionName, updated: updated, completion: completion)
     }
 
-    public func create(collection: String, newItem: Item, completion: @escaping (Result<String, FirestoreError>) -> Void) {
-        var ref: DocumentReference? = nil
+    public func create(collection: String,
+                       newItem: Item,
+                       completion: @escaping (Result<String, FirestoreError>) -> Void) {
+        var ref: DocumentReference?
         ref = Self.db?.collection(collection).addDocument(data: newItem.toFirestore()) { err in
             if let err = err {
                 completion(.failure(Self.createFirestoreError("Error while adding document", err)))
@@ -115,7 +127,7 @@ extension FirestoreService {
             }
         }
     }
-    
+
     public func create(newItem: Item, completion: @escaping (Result<String, FirestoreError>) -> Void) {
         self.create(collection: Self.collectionName, newItem: newItem, completion: completion)
     }
