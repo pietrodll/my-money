@@ -19,3 +19,18 @@ extension Account {
         self.name = "Unknown"
     }
 }
+
+extension Account: FirestoreEntity {
+    init(fromFirestore data: [String: Any], id: String) throws {
+        guard let name = data["name"] as? String else {
+            throw InstanciationError(collection: "accounts", className: "Account", causedBy: data)
+        }
+
+        self.id = id
+        self.name = name
+    }
+
+    func toFirestore() -> [String: Any] {
+        return ["name": name]
+    }
+}
