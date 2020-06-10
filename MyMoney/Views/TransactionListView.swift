@@ -39,9 +39,9 @@ struct TransactionListView: View {
                         Text("Error: \(error ?? "")")
                     } else {
                         List {
-                            ForEach(transactions) { transaction in
-                                NavigationLink(destination: TransactionDetailsView(transaction: transaction)) {
-                                    TransactionRow(transaction: transaction)
+                            ForEach(Range(uncheckedBounds: (0, transactions.count))) { index in
+                                NavigationLink(destination: TransactionDetailsView(transaction: self.$transactions[index])) {
+                                    TransactionRow(transaction: self.transactions[index])
                                 }
                             }
                         }

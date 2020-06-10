@@ -38,7 +38,7 @@ extension Transaction: DisplayableTransaction {
     }
 
     var formattedAmount: String {
-        String(amount) + " " + currency.rawValue
+        String(format: "%.2f", amount) + " " + currency.symbol
     }
 
     var type: TransactionType {
@@ -71,7 +71,20 @@ extension Transaction: FirestoreEntity {
             "description": description,
             "createdAt": createdAt,
             "account": account.id,
-            "currency": currency
+            "currency": currency.rawValue
         ]
+    }
+}
+
+extension Transaction {
+    init() {
+        self.init(
+            id: "id",
+            amount: 0.0,
+            description: "Expense",
+            account: Account(id: "id"),
+            currency: .EUR,
+            createdAt: Date(timeIntervalSinceNow: 0)
+        )
     }
 }

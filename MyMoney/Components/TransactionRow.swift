@@ -11,22 +11,16 @@ import SwiftUI
 struct TransactionRow: View {
     let transaction: Transaction
 
-    private var dateString: String {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        return formatter.string(from: transaction.createdAt)
-    }
-
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
                 Text(transaction.description).font(.headline)
-                Text(dateString).font(.subheadline)
+                Text(transaction.formattedDate).font(.subheadline)
             }
 
             Spacer()
 
-            Text("\(String(transaction.amount)) \(transaction.currency.rawValue)").font(.headline)
+            Text(transaction.formattedAmount).font(.headline)
         }
     }
 }

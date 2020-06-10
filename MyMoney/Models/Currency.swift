@@ -8,8 +8,23 @@
 
 import Foundation
 
-enum Currency: String, Codable, Hashable {
+enum Currency: String, Codable, Hashable, CaseIterable, Identifiable {
     case USD
     case EUR
     case SGD
+
+    var symbol: String {
+        switch self {
+            case .EUR:
+                return "€"
+            case .USD:
+                return "$"
+            case .SGD:
+                return "S$"
+        }
+    }
+
+    var id: String {
+        self.rawValue
+    }
 }

@@ -18,12 +18,9 @@ protocol FirestoreService {
     associatedtype Item: FirestoreEntity, Identifiable
 
     static var collectionName: String { get }
-    static var db: Firestore? { get }
+    var db: Firestore { get }
 
     static func getInstance() -> Self
-
-    static func toModel(data: [String: Any], id: String) -> Item?
-    static func toDict(model: Item) -> [String: Any]
 }
 
 extension FirestoreService {
@@ -35,9 +32,9 @@ extension FirestoreService {
     }
 
     public func get(collection: String, id: String, completion: @escaping (Result<Item, FirestoreError>) -> Void) {
-        let ref = Self.db?.collection(collection).document(id)
+        let ref = self.db.collection(collection).document(id)
 
-        ref?.getDocument { (document, error) in
+        ref.getDocument { (document, error) in
             if let err = error {
                 completion(.failure(Self.createFirestoreError("Error while getting document", err)))
                 return
@@ -64,7 +61,7 @@ extension FirestoreService {
     }
 
     public func list(collection: String, completion: @escaping (Result<[Item], FirestoreError>) -> Void) {
-        Self.db?.collection(collection).getDocuments { snapshot, err in
+        self.db.collection(collection).getDocuments { snapshot, err in
             if let err = err {
                 completion(.failure(Self.createFirestoreError("Error while getting documents", err)))
                 return
@@ -102,7 +99,7 @@ extension FirestoreService {
             return
         }
 
-        Self.db?.collection(collection).document(itemId).setData(updated.toFirestore()) { err in
+        self.db.collection(collection).document(itemId).setData(updated.toFirestore()) { err in
             if let err = err {
                 completion(.failure(Self.createFirestoreError("Error while updating document", err)))
             } else {
@@ -119,7 +116,7 @@ extension FirestoreService {
                        newItem: Item,
                        completion: @escaping (Result<String, FirestoreError>) -> Void) {
         var ref: DocumentReference?
-        ref = Self.db?.collection(collection).addDocument(data: newItem.toFirestore()) { err in
+        ref = self.db.collection(collection).addDocument(data: newItem.toFirestore()) { err in
             if let err = err {
                 completion(.failure(Self.createFirestoreError("Error while adding document", err)))
             } else {

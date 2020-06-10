@@ -11,6 +11,7 @@
 		090A14D7248B3CBC00DF84E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 090A14D5248B3CBC00DF84E6 /* GoogleService-Info.plist */; };
 		090A14D8248B3CBC00DF84E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 090A14D5248B3CBC00DF84E6 /* GoogleService-Info.plist */; };
 		094453A5248B8BBF00BDE063 /* TransactionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094453A4248B8BBF00BDE063 /* TransactionService.swift */; };
+		09572E6A249082AA00010735 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09572E69249082AA00010735 /* AccountService.swift */; };
 		09625B20248BF66500D053EC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09625B1F248BF66500D053EC /* User.swift */; };
 		09625B22248BF6BD00D053EC /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09625B21248BF6BD00D053EC /* SessionStore.swift */; };
 		09625B25248C007400D053EC /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09625B24248C007400D053EC /* AccountView.swift */; };
@@ -18,6 +19,8 @@
 		09625B29248C072800D053EC /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09625B28248C072800D053EC /* TransactionRow.swift */; };
 		09625B2B248C2C4A00D053EC /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09625B2A248C2C4A00D053EC /* ActivityIndicator.swift */; };
 		0963381E248C45EC00CAEAB6 /* TransactionDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0963381D248C45EB00CAEAB6 /* TransactionDetailsView.swift */; };
+		0963E84C248EFD90002EAEB9 /* TransactionSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0963E84B248EFD90002EAEB9 /* TransactionSummary.swift */; };
+		0963E84E248F00C0002EAEB9 /* TransactionEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0963E84D248F00C0002EAEB9 /* TransactionEditor.swift */; };
 		09773D19248B440E0081DAFA /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09773D18248B440E0081DAFA /* FirestoreService.swift */; };
 		09773D1B248B46750081DAFA /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09773D1A248B46750081DAFA /* Errors.swift */; };
 		09773D1D248B4A470081DAFA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09773D1C248B4A470081DAFA /* LoginView.swift */; };
@@ -60,6 +63,7 @@
 		0361A756E7EA7F59A134BAAB /* Pods_MyMoney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMoney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		090A14D5248B3CBC00DF84E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		094453A4248B8BBF00BDE063 /* TransactionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionService.swift; sourceTree = "<group>"; };
+		09572E69249082AA00010735 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		09625B1F248BF66500D053EC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		09625B21248BF6BD00D053EC /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		09625B24248C007400D053EC /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 		09625B28248C072800D053EC /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
 		09625B2A248C2C4A00D053EC /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		0963381D248C45EB00CAEAB6 /* TransactionDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsView.swift; sourceTree = "<group>"; };
+		0963E84B248EFD90002EAEB9 /* TransactionSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSummary.swift; sourceTree = "<group>"; };
+		0963E84D248F00C0002EAEB9 /* TransactionEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionEditor.swift; sourceTree = "<group>"; };
 		09773D18248B440E0081DAFA /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		09773D1A248B46750081DAFA /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		09773D1C248B4A470081DAFA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -143,6 +149,8 @@
 		09773D16248B437E0081DAFA /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0963E84B248EFD90002EAEB9 /* TransactionSummary.swift */,
+				0963E84D248F00C0002EAEB9 /* TransactionEditor.swift */,
 				09625B28248C072800D053EC /* TransactionRow.swift */,
 				09625B2A248C2C4A00D053EC /* ActivityIndicator.swift */,
 			);
@@ -153,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				09773D18248B440E0081DAFA /* FirestoreService.swift */,
+				09572E69249082AA00010735 /* AccountService.swift */,
 				094453A4248B8BBF00BDE063 /* TransactionService.swift */,
 				09773D1A248B46750081DAFA /* Errors.swift */,
 			);
@@ -533,6 +542,7 @@
 				09773D19248B440E0081DAFA /* FirestoreService.swift in Sources */,
 				09625B27248C041C00D053EC /* TransactionListView.swift in Sources */,
 				09F23DC3248A0DB4000E1BF0 /* Currency.swift in Sources */,
+				0963E84E248F00C0002EAEB9 /* TransactionEditor.swift in Sources */,
 				09F23DC1248A0CFC000E1BF0 /* Account.swift in Sources */,
 				09625B25248C007400D053EC /* AccountView.swift in Sources */,
 				09773D1F248B55970081DAFA /* MainView.swift in Sources */,
@@ -544,8 +554,10 @@
 				0963381E248C45EC00CAEAB6 /* TransactionDetailsView.swift in Sources */,
 				09773D1D248B4A470081DAFA /* LoginView.swift in Sources */,
 				09625B29248C072800D053EC /* TransactionRow.swift in Sources */,
+				0963E84C248EFD90002EAEB9 /* TransactionSummary.swift in Sources */,
 				09E2A868248D7F1000C9F50C /* TransactionCategory.swift in Sources */,
 				09F23DBF248A0BEA000E1BF0 /* Transaction.swift in Sources */,
+				09572E6A249082AA00010735 /* AccountService.swift in Sources */,
 				09F23D92248A094D000E1BF0 /* ConnectedView.swift in Sources */,
 				09625B2B248C2C4A00D053EC /* ActivityIndicator.swift in Sources */,
 			);
@@ -715,6 +727,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MyMoney/Preview Content\"";
+				DEVELOPMENT_TEAM = K267V876JU;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MyMoney/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -735,6 +748,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MyMoney/Preview Content\"";
+				DEVELOPMENT_TEAM = K267V876JU;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MyMoney/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

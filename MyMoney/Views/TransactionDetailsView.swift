@@ -9,26 +9,55 @@
 import SwiftUI
 
 struct TransactionDetailsView: View {
-    var transaction: Transaction
+    static var service = TransactionService.getInstance()
+
+    @Binding var transaction: Transaction
+
+    @State private var editMode: EditMode = .inactive
+    @State private var draftTransaction: Transaction = Transaction()
+    @State private var loading = false
+    @State private var error: String?
+
+    private var cancelButton: some View {
+        Button("Cancel") {
+            self.draftTransaction = self.transaction
+            self.editMode = .inactive
+        }
+    }
+
+    private func updateTransaction() {
+        self.loading = true
+        Self.service.update(updated: self.draftTransaction) { result in
+            switch result {
+                case .success:
+                    self.loading = false
+                    self.error = nil
+                    self.transaction = self.draftTransaction
+                case let .failure(error):
+                    self.loading = false
+                    self.error = error.message
+            }
+        }
+    }
 
     var body: some View {
         NavigationView {
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack(alignment: .leading) {
-                    Text("Description").font(.headline)
-                    Text(transaction.description)
-
-                    Text("Amount").font(.headline)
-                    Text(transaction.formattedAmount)
-
-                    Text("Date").font(.headline)
-                    Text(transaction.formattedDate)
-
-                    Text("Account").font(.headline)
-                    Text(transaction.account.name)
+            Group {
+                if loading {
+                    ActivityIndicator()
+                } else if editMode == .inactive {
+                    TransactionSummary(transaction: transaction)
+                } else {
+                    TransactionEditor(transaction: $draftTransaction)
+                        .onAppear {
+                            self.draftTransaction = self.transaction
+                        }
+                    .onDisappear(perform: updateTransaction)
                 }
             }
             .navigationBarTitle("Transaction details")
+            .navigationBarItems(trailing: EditButton())
+            .environment(\.editMode, $editMode)
         }
     }
 }
@@ -43,6 +72,6 @@ struct TransactionDetailsView_Previews: PreviewProvider {
         createdAt: Date(timeIntervalSinceNow: 0))
 
     static var previews: some View {
-        TransactionDetailsView(transaction: transaction)
+        TransactionDetailsView(transaction: Binding.constant(transaction))
     }
 }
