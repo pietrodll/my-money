@@ -11,15 +11,23 @@ import Combine
 import Firebase
 
 class SessionStore: ObservableObject {
-    @Published var session: User?
+    @Published var session: MyMoneyUser?
     var handler: AuthStateDidChangeListenerHandle?
+    private var userService = UserService.getInstance()
 
     // MARK: Auth listener
 
     func listen() {
         handler = Auth.auth().addStateDidChangeListener { _, user in
             if let user = user {
-                self.session = User(id: user.uid, email: user.email, displayName: user.displayName)
+                self.userService.get(id: user.uid) { result in
+                    switch result {
+                        case let .success(mmUser):
+                            self.session = mmUser
+                        case .failure:
+                            self.session = nil
+                    }
+                }
             } else {
                 self.session = nil
             }
@@ -34,12 +42,27 @@ class SessionStore: ObservableObject {
 
     // MARK: Auth methods
 
-    func signUp(email: String, password: String, completion: @escaping AuthDataResultCallback) {
-        Auth.auth().createUser(withEmail: email, password: password, completion: completion)
+    func signUp(email: String,
+                password: String,
+                name: String,
+                completion: @escaping (Result<String, Error>) -> Void) {
+        Auth.auth().createUser(withEmail: email, password: password) { auth, error in
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                self.userService.create(fromAuth: auth!, name: name, completion: completion)
+            }
+        }
     }
 
-    func signIn(email: String, password: String, completion: @escaping AuthDataResultCallback) {
-        Auth.auth().signIn(withEmail: email, password: password, completion: completion)
+    func signIn(email: String, password: String, completion: @escaping (Result<String, Error>) -> Void) {
+        Auth.auth().signIn(withEmail: email, password: password) { auth, error in
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                completion(.success(auth!.user.uid))
+            }
+        }
     }
 
     func signOut() -> Bool {

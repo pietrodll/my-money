@@ -25,6 +25,7 @@ struct AccountView: View {
     var body: some View {
         VStack {
             Text("Account settings").font(.title)
+            Text("Hi \(session.session?.displayName ?? ""), here you can change your account settings")
             Button(action: handleSignOut) {
                 Text("Sign out")
             }

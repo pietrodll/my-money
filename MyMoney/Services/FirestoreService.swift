@@ -9,10 +9,22 @@
 import Foundation
 import Firebase
 
+// MARK: FirestoreEntity
+
 protocol FirestoreEntity {
     init(fromFirestore data: [String: Any], id: String) throws
     func toFirestore() -> [String: Any]
 }
+
+extension FirestoreEntity {
+    func toFirestore(serverTimestampField: String) -> [String: Any] {
+        var data = self.toFirestore()
+        data[serverTimestampField] = FieldValue.serverTimestamp()
+        return data
+    }
+}
+
+// MARK: FirestoreService
 
 protocol FirestoreService {
     associatedtype Item: FirestoreEntity, Identifiable
@@ -112,20 +124,49 @@ extension FirestoreService {
         self.update(collection: Self.collectionName, updated: updated, completion: completion)
     }
 
-    public func create(collection: String,
-                       newItem: Item,
-                       completion: @escaping (Result<String, FirestoreError>) -> Void) {
-        var ref: DocumentReference?
-        ref = self.db.collection(collection).addDocument(data: newItem.toFirestore()) { err in
+    private func create(collection: String,
+                        data: [String: Any],
+                        id: String?,
+                        completion: @escaping (Result<String, FirestoreError>) -> Void) {
+        let ref = id == nil ? self.db.collection(collection).document() : self.db.collection(collection).document(id!)
+        ref.setData(data) { err in
             if let err = err {
                 completion(.failure(Self.createFirestoreError("Error while adding document", err)))
             } else {
-                completion(.success(ref!.documentID))
+                completion(.success(ref.documentID))
             }
         }
     }
 
+    public func create(collection: String,
+                       newItem: Item,
+                       completion: @escaping (Result<String, FirestoreError>) -> Void) {
+        self.create(collection: collection,
+                    data: newItem.toFirestore(),
+                    id: newItem.id as? String,
+                    completion: completion)
+    }
+
+    public func create(collection: String,
+                       newItem: Item,
+                       serverTimestampField: String,
+                       completion: @escaping (Result<String, FirestoreError>) -> Void) {
+        self.create(collection: collection,
+                    data: newItem.toFirestore(serverTimestampField: serverTimestampField),
+                    id: newItem.id as? String,
+                    completion: completion)
+    }
+
     public func create(newItem: Item, completion: @escaping (Result<String, FirestoreError>) -> Void) {
         self.create(collection: Self.collectionName, newItem: newItem, completion: completion)
+    }
+
+    public func create(newItem: Item,
+                       serverTimestampField: String,
+                       completion: @escaping (Result<String, FirestoreError>) -> Void) {
+        self.create(collection: Self.collectionName,
+                    newItem: newItem,
+                    serverTimestampField: serverTimestampField,
+                    completion: completion)
     }
 }

@@ -20,9 +20,9 @@ struct LoginView: View {
     func handleSignin() {
         loading = true
         error = false
-        session.signIn(email: email, password: password) { _, error in
+        session.signIn(email: email, password: password) { result in
             self.loading = false
-            if error != nil {
+            if case .failure = result {
                 self.error = true
             } else {
                 self.email = ""

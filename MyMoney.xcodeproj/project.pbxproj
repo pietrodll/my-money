@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090281C724A2E74F00037535 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090281C624A2E74F00037535 /* UserService.swift */; };
 		090A14D6248B3CBC00DF84E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 090A14D5248B3CBC00DF84E6 /* GoogleService-Info.plist */; };
 		090A14D7248B3CBC00DF84E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 090A14D5248B3CBC00DF84E6 /* GoogleService-Info.plist */; };
 		090A14D8248B3CBC00DF84E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 090A14D5248B3CBC00DF84E6 /* GoogleService-Info.plist */; };
@@ -62,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		0361A756E7EA7F59A134BAAB /* Pods_MyMoney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMoney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		090281C624A2E74F00037535 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		090A14D5248B3CBC00DF84E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		094453A4248B8BBF00BDE063 /* TransactionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionService.swift; sourceTree = "<group>"; };
 		09572E69249082AA00010735 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			children = (
 				09773D18248B440E0081DAFA /* FirestoreService.swift */,
 				09572E69249082AA00010735 /* AccountService.swift */,
+				090281C624A2E74F00037535 /* UserService.swift */,
 				094453A4248B8BBF00BDE063 /* TransactionService.swift */,
 				09773D1A248B46750081DAFA /* Errors.swift */,
 			);
@@ -561,6 +564,7 @@
 				09E2A868248D7F1000C9F50C /* TransactionCategory.swift in Sources */,
 				09F23DBF248A0BEA000E1BF0 /* Transaction.swift in Sources */,
 				09572E6A249082AA00010735 /* AccountService.swift in Sources */,
+				090281C724A2E74F00037535 /* UserService.swift in Sources */,
 				09F23D92248A094D000E1BF0 /* ConnectedView.swift in Sources */,
 				09625B2B248C2C4A00D053EC /* ActivityIndicator.swift in Sources */,
 				09572E6C249086C400010735 /* SignupView.swift in Sources */,

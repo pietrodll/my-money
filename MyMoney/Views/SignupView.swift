@@ -16,6 +16,7 @@ struct SignupView: View {
     @State private var loading = false
     @State private var success = false
     @State private var error: String?
+    @State private var name = ""
     @State private var email = ""
     @State private var password = ""
     @State private var confirmPassword = ""
@@ -25,10 +26,10 @@ struct SignupView: View {
             error = "Passwords don't match"
         } else {
             loading = true
-            session.signUp(email: email, password: password) { _, err in
+            session.signUp(email: email, password: password, name: name) { result in
                 self.loading = false
-                if err != nil {
-                    self.error = err?.localizedDescription
+                if case let .failure(err) = result {
+                    self.error = err.localizedDescription
                 } else {
                     self.success = true
                     self.show = false
@@ -50,6 +51,7 @@ struct SignupView: View {
                 Text("Signup successful!")
             } else {
                 Form {
+                    TextField("Name", text: $name)
                     TextField("Email", text: $email)
                         .keyboardType(.emailAddress)
                         .textContentType(.emailAddress)
