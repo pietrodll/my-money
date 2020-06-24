@@ -40,7 +40,9 @@ struct TransactionListView: View {
                     } else {
                         List {
                             ForEach(Range(uncheckedBounds: (0, transactions.count))) { index in
-                                NavigationLink(destination: TransactionDetailsView(transaction: self.$transactions[index])) {
+                                NavigationLink(
+                                    destination: TransactionDetailsView(transaction: self.$transactions[index])
+                                ) {
                                     TransactionRow(transaction: self.transactions[index])
                                 }
                             }

@@ -12,6 +12,7 @@
 		090A14D8248B3CBC00DF84E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 090A14D5248B3CBC00DF84E6 /* GoogleService-Info.plist */; };
 		094453A5248B8BBF00BDE063 /* TransactionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094453A4248B8BBF00BDE063 /* TransactionService.swift */; };
 		09572E6A249082AA00010735 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09572E69249082AA00010735 /* AccountService.swift */; };
+		09572E6C249086C400010735 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09572E6B249086C400010735 /* SignupView.swift */; };
 		09625B20248BF66500D053EC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09625B1F248BF66500D053EC /* User.swift */; };
 		09625B22248BF6BD00D053EC /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09625B21248BF6BD00D053EC /* SessionStore.swift */; };
 		09625B25248C007400D053EC /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09625B24248C007400D053EC /* AccountView.swift */; };
@@ -64,6 +65,7 @@
 		090A14D5248B3CBC00DF84E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		094453A4248B8BBF00BDE063 /* TransactionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionService.swift; sourceTree = "<group>"; };
 		09572E69249082AA00010735 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
+		09572E6B249086C400010735 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		09625B1F248BF66500D053EC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		09625B21248BF6BD00D053EC /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		09625B24248C007400D053EC /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				09773D1C248B4A470081DAFA /* LoginView.swift */,
+				09572E6B249086C400010735 /* SignupView.swift */,
 				09F23D91248A094D000E1BF0 /* ConnectedView.swift */,
 				09625B26248C041C00D053EC /* TransactionListView.swift */,
 				0963381D248C45EB00CAEAB6 /* TransactionDetailsView.swift */,
@@ -560,6 +563,7 @@
 				09572E6A249082AA00010735 /* AccountService.swift in Sources */,
 				09F23D92248A094D000E1BF0 /* ConnectedView.swift in Sources */,
 				09625B2B248C2C4A00D053EC /* ActivityIndicator.swift in Sources */,
+				09572E6C249086C400010735 /* SignupView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

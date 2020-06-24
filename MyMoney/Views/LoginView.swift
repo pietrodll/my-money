@@ -15,6 +15,7 @@ struct LoginView: View {
     @State private var password = ""
     @State private var loading = false
     @State private var error = false
+    @State private var showSignup = false
 
     func handleSignin() {
         loading = true
@@ -30,28 +31,44 @@ struct LoginView: View {
         }
     }
 
+    func handleShowSignup() {
+        showSignup.toggle()
+    }
+
     var body: some View {
-        VStack {
-            Text("Login").font(.title)
-            HStack(alignment: .center) {
-                Image(systemName: "dollarsign.circle.fill")
-                    .resizable()
-                    .frame(width: 200, height: 200, alignment: .center)
-                    .foregroundColor(.blue)
-            }
-            Form {
-                TextField("Email", text: $email)
-                    .keyboardType(.emailAddress)
-                    .textContentType(.emailAddress)
-                    .disableAutocorrection(true)
-                SecureField("Password", text: $password)
-                Button(action: handleSignin) {
-                    Text("Sign in")
+        NavigationView {
+            VStack {
+                Text("Login").font(.title)
+                HStack(alignment: .center) {
+                    Image(systemName: "dollarsign.circle.fill")
+                        .resizable()
+                        .frame(width: 200, height: 200, alignment: .center)
+                        .foregroundColor(.blue)
+                }
+                Form {
+                    TextField("Email", text: $email)
+                        .keyboardType(.emailAddress)
+                        .textContentType(.emailAddress)
+                        .disableAutocorrection(true)
+
+                    SecureField("Password", text: $password)
+
+                    Button(action: handleSignin) {
+                        Text("Sign in")
+                    }
+
+                    Button(action: handleShowSignup) {
+                        Text("Don't have an account yet? Sign up here!")
+                    }
+
+                    if error {
+                        Text("An error occurred!")
+                    }
                 }
             }
-
-            if error {
-                Text("An error occurred!")
+            .navigationBarHidden(true)
+            .sheet(isPresented: $showSignup) {
+                SignupView(show: self.$showSignup).environmentObject(self.session)
             }
         }
     }
