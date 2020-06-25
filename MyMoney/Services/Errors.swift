@@ -47,3 +47,10 @@ class InstanciationError: FirestoreError {
         super.init(collection: collection, message: message)
     }
 }
+
+class UndefinedUserError: FirestoreError {
+    init(collection: String) {
+        let message = "Cannot get data from collection \(collection), the user must be defined"
+        super.init(collection: collection, message: message)
+    }
+}

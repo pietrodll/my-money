@@ -9,13 +9,14 @@
 import Foundation
 import Firebase
 
-final class AccountService: FirestoreService {
+final class AccountService: UserFirestoreService {
     typealias Item = Account
 
     static var collectionName = "accounts"
     private static var instance: AccountService?
 
     var db: Firestore
+    var userId: String?
 
     static func getInstance() -> AccountService {
         if instance == nil {
@@ -28,5 +29,4 @@ final class AccountService: FirestoreService {
     private init() {
         self.db = Firestore.firestore()
     }
-
 }

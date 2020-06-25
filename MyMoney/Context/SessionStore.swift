@@ -12,7 +12,8 @@ import Firebase
 
 class SessionStore: ObservableObject {
     @Published var session: MyMoneyUser?
-    var handler: AuthStateDidChangeListenerHandle?
+
+    private var handler: AuthStateDidChangeListenerHandle?
     private var userService = UserService.getInstance()
 
     // MARK: Auth listener
@@ -24,6 +25,7 @@ class SessionStore: ObservableObject {
                     switch result {
                         case let .success(mmUser):
                             self.session = mmUser
+                            self.initServices(userId: mmUser.id)
                         case .failure:
                             self.session = nil
                     }
@@ -60,7 +62,8 @@ class SessionStore: ObservableObject {
             if let error = error {
                 completion(.failure(error))
             } else {
-                completion(.success(auth!.user.uid))
+                let userId = auth!.user.uid
+                completion(.success(userId))
             }
         }
     }
@@ -73,5 +76,12 @@ class SessionStore: ObservableObject {
         } catch {
             return false
         }
+    }
+
+    // MARK: Services
+
+    private func initServices(userId: String) {
+        TransactionService.getInstance().userId = userId
+        AccountService.getInstance().userId = userId
     }
 }

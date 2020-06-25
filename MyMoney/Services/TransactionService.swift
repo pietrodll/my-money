@@ -9,12 +9,14 @@
 import Foundation
 import Firebase
 
-final class TransactionService: FirestoreService {
+final class TransactionService: UserFirestoreService {
     typealias Item = Transaction
 
     static var collectionName = "transactions"
-    var db: Firestore
     private static var instance: TransactionService?
+
+    var db: Firestore
+    var userId: String?
 
     static func getInstance() -> TransactionService {
         if Self.instance == nil {
