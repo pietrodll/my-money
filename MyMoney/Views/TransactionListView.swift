@@ -37,6 +37,8 @@ struct TransactionListView: View {
                 } else {
                     if error != nil {
                         Text("Error: \(error ?? "")")
+                    } else if transactions.count == 0 {
+                        Text("No transactions, you can add one by clicking the + button")
                     } else {
                         List {
                             ForEach(Range(uncheckedBounds: (0, transactions.count))) { index in
@@ -51,6 +53,9 @@ struct TransactionListView: View {
                 }
             }
             .navigationBarTitle("Transactions")
+            .navigationBarItems(trailing: NavigationLink(destination: NewTransactionView()) {
+                Image(systemName: "plus")
+            })
         }
         .onAppear(perform: fetchTransactions)
     }

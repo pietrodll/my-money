@@ -13,6 +13,7 @@
 		090A14D8248B3CBC00DF84E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 090A14D5248B3CBC00DF84E6 /* GoogleService-Info.plist */; };
 		094453A5248B8BBF00BDE063 /* TransactionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094453A4248B8BBF00BDE063 /* TransactionService.swift */; };
 		0951645A24A42E3200F285E3 /* UserFirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0951645924A42E3200F285E3 /* UserFirestoreService.swift */; };
+		0951645C24A43D9500F285E3 /* NewTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0951645B24A43D9500F285E3 /* NewTransactionView.swift */; };
 		09572E6A249082AA00010735 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09572E69249082AA00010735 /* AccountService.swift */; };
 		09572E6C249086C400010735 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09572E6B249086C400010735 /* SignupView.swift */; };
 		09625B20248BF66500D053EC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09625B1F248BF66500D053EC /* User.swift */; };
@@ -68,6 +69,7 @@
 		090A14D5248B3CBC00DF84E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		094453A4248B8BBF00BDE063 /* TransactionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionService.swift; sourceTree = "<group>"; };
 		0951645924A42E3200F285E3 /* UserFirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFirestoreService.swift; sourceTree = "<group>"; };
+		0951645B24A43D9500F285E3 /* NewTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionView.swift; sourceTree = "<group>"; };
 		09572E69249082AA00010735 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		09572E6B249086C400010735 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		09625B1F248BF66500D053EC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				09572E6B249086C400010735 /* SignupView.swift */,
 				09F23D91248A094D000E1BF0 /* ConnectedView.swift */,
 				09625B26248C041C00D053EC /* TransactionListView.swift */,
+				0951645B24A43D9500F285E3 /* NewTransactionView.swift */,
 				0963381D248C45EB00CAEAB6 /* TransactionDetailsView.swift */,
 				09625B24248C007400D053EC /* AccountView.swift */,
 				09773D1E248B55970081DAFA /* MainView.swift */,
@@ -569,6 +572,7 @@
 				09F23DBF248A0BEA000E1BF0 /* Transaction.swift in Sources */,
 				09572E6A249082AA00010735 /* AccountService.swift in Sources */,
 				090281C724A2E74F00037535 /* UserService.swift in Sources */,
+				0951645C24A43D9500F285E3 /* NewTransactionView.swift in Sources */,
 				09F23D92248A094D000E1BF0 /* ConnectedView.swift in Sources */,
 				09625B2B248C2C4A00D053EC /* ActivityIndicator.swift in Sources */,
 				09572E6C249086C400010735 /* SignupView.swift in Sources */,

@@ -22,7 +22,7 @@ struct TransactionEditor: View {
     var body: some View {
         Form {
             TextField("Description", text: $transaction.description)
-            TextField("Amount", value: $transaction.amount, formatter: NumberFormatter())
+            TextField("Amount", value: $transaction.amount, formatter: NumberFormatter()).keyboardType(.decimalPad)
             Picker("Currency", selection: $currencyValue) {
                 ForEach(TransactionEditor.currencies, id: \.self) {
                     Text($0)

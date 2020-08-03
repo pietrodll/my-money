@@ -43,6 +43,8 @@ extension FirestoreService {
         return FirestoreError(collection: Self.collectionName, message: message)
     }
 
+    // MARK: Get
+
     public func get(collection: String, id: String, completion: @escaping (Result<Item, FirestoreError>) -> Void) {
         let ref = self.db.collection(collection).document(id)
 
@@ -71,6 +73,8 @@ extension FirestoreService {
     public func get(id: String, completion: @escaping (Result<Item, FirestoreError>) -> Void) {
         self.get(collection: Self.collectionName, id: id, completion: completion)
     }
+
+    // MARK: List
 
     public func list(collection: String, completion: @escaping (Result<[Item], FirestoreError>) -> Void) {
         self.db.collection(collection).getDocuments { snapshot, err in
@@ -103,6 +107,8 @@ extension FirestoreService {
         self.list(collection: Self.collectionName, completion: completion)
     }
 
+    // MARK: Update
+
     public func update(collection: String,
                        updated: Item,
                        completion: @escaping (Result<Void, FirestoreError>) -> Void) {
@@ -124,6 +130,8 @@ extension FirestoreService {
         self.update(collection: Self.collectionName, updated: updated, completion: completion)
     }
 
+    // MARK: Create
+
     private func create(collection: String,
                         data: [String: Any],
                         id: String?,
@@ -143,7 +151,7 @@ extension FirestoreService {
                        completion: @escaping (Result<String, FirestoreError>) -> Void) {
         self.create(collection: collection,
                     data: newItem.toFirestore(),
-                    id: newItem.id as? String,
+                    id: nil,
                     completion: completion)
     }
 
@@ -153,7 +161,26 @@ extension FirestoreService {
                        completion: @escaping (Result<String, FirestoreError>) -> Void) {
         self.create(collection: collection,
                     data: newItem.toFirestore(serverTimestampField: serverTimestampField),
-                    id: newItem.id as? String,
+                    id: nil,
+                    completion: completion)
+    }
+
+    public func create(collection: String,
+                       newItemWithId: Item,
+                       completion: @escaping (Result<String, FirestoreError>) -> Void) {
+        self.create(collection: collection,
+                    data: newItemWithId.toFirestore(),
+                    id: newItemWithId.id as? String,
+                    completion: completion)
+    }
+
+    public func create(collection: String,
+                       newItemWithId: Item,
+                       serverTimestampField: String,
+                       completion: @escaping (Result<String, FirestoreError>) -> Void) {
+        self.create(collection: collection,
+                    data: newItemWithId.toFirestore(serverTimestampField: serverTimestampField),
+                    id: newItemWithId.id as? String,
                     completion: completion)
     }
 
@@ -166,6 +193,19 @@ extension FirestoreService {
                        completion: @escaping (Result<String, FirestoreError>) -> Void) {
         self.create(collection: Self.collectionName,
                     newItem: newItem,
+                    serverTimestampField: serverTimestampField,
+                    completion: completion)
+    }
+
+    public func create(newItemWithId: Item, completion: @escaping (Result<String, FirestoreError>) -> Void) {
+        self.create(collection: Self.collectionName, newItemWithId: newItemWithId, completion: completion)
+    }
+
+    public func create(newItemWithId: Item,
+                       serverTimestampField: String,
+                       completion: @escaping (Result<String, FirestoreError>) -> Void) {
+        self.create(collection: Self.collectionName,
+                    newItemWithId: newItemWithId,
                     serverTimestampField: serverTimestampField,
                     completion: completion)
     }
